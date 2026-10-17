@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#6366f1"/>
+  <text x="100" y="125" font-size="80" font-family="Arial, sans-serif"
+        font-weight="bold" text-anchor="middle" fill="#ffffff">NK</text>
+</svg>
+<body>
+    <header>
+        <img src="avatar.svg" alt="Foto profil Teddy">
+        <h1>Teddy The Protector</h1>
+        <p>Mahasiswa IT - Belajar web development</p>
+    </header>
+</body>
+<nav aria-label="Media sosial">
+    <ul>
+        <li><a href="https://github.com/username" aria-label="GitHub">GH</a></li>
+        <li><a href="https://instagram.com/username" aria-label="Instagram">IG</a></li>
+        <li><a href="https://linkedin.com/in/username" aria-label="LinkedIn">LI</a></li>
+    </ul>
+</nav>
+    <main>
+        <h2>Link Saya</h2>
+        <ul>
+            <li><a href="https://example.com/portfolio">Portofolio</a></li>
+            <li><a href="https://github.com/username/link-page">Link Page Ini</a></li>
+            <li><a href="https://example.com/catatan">Catatan Kursus</a></li>
+            <li><a href="mailto:halo@example.com">Email</a></li>
+        </ul>
+    </main>
+        <footer>
+        <p>&copy; 2026 Widian Sakhara</p>
+    </footer>
