@@ -1,25 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello</title>
+    <title>Widian Sakhara - Link Profile</title>
+    <meta name="description" content="Profil link Widian Sakhara - Kumpulan media sosial, portofolio, dan resume.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <body>
-    <header>
-        <img src="avatar.svg" alt="Foto profil Teddy">
-        <h1>Teddy The Protector</h1>
-        <p>Mahasiswa IT - Belajar web development</p>
+
+    <div class="ambient-glow" aria-hidden="true"></div>
+    <div class="ambient-glow-2" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Beralih Tema" title="Beralih Tema">
+            <span id="themeIcon">
+
+                <svg class="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <path d="M12 2v2"></path>
+                    <path d="M12 20v2"></path>
+                    <path d="m4.93 4.93 1.41 1.41"></path>
+                    <path d="m17.66 17.66 1.41 1.41"></path>
+                    <path d="M2 12h2"></path>
+                    <path d="M20 12h2"></path>
+                    <path d="m6.34 17.66-1.41 1.41"></path>
+                    <path d="m19.07 4.93-1.41 1.41"></path>
+                </svg>
+            </span>
+        </button>
     </header>
-</body>
-<nav aria-label="Media sosial">
-</nav>
-        <footer>
-        <p>&copy; 2026 Widian Sakhara</p>
+
+    <main class="page-wrapper">
+        <div class="card-container">
+            
+            <section class="profile-section" aria-label="Profil Pengguna">
+                <div class="avatar-wrapper" id="avatarWrapper">
+                    <div class="avatar-ring" aria-hidden="true"></div>
+                    <img id="avatarImg" src="avatar.jpg" onerror="this.onerror=null; this.src='avatar.png';" alt="Widian Sakhara" class="avatar-img" width="140" height="140">
+                    <input type="file" id="avatarFileInput" accept="image/*" style="display: none;" aria-label="Upload Foto Profil">
+                </div>
+                
+                <h1 class="profile-name">Widian Sakhara</h1>
+                <p class="profile-bio">Mahasiswa IT · Belajar web development</p>
+
+                <nav class="social-pills-row" aria-label="Tautan Media Sosial Singkat">
+                    <a href="https://github.com/widiansakhara" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="GitHub">
+                        <span aria-hidden="true">🐙</span>
+                    </a>
+                    <a href="https://instagram.com/widiannnnnn" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Instagram">
+                        <span aria-hidden="true">📷</span>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="LinkedIn">
+                        <span aria-hidden="true">💼</span>
+                    </a>
+                </nav>
+            </section>
+
+            <section class="links-section" aria-label="Daftar Tautan">
+                <h2 class="section-label">LINK SAYA</h2>
+
+                <div class="filter-tabs" role="tablist" aria-label="Filter Tautan">
+                    <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">
+                        Semua
+                    </button>
+                    <button class="filter-tab" data-filter="sosmed" role="tab" aria-selected="false">
+                        Sosmed
+                    </button>
+                    <button class="filter-tab" data-filter="project" role="tab" aria-selected="false">
+                        Project
+                    </button>
+                </div>
+
+                <div id="linkCounter" class="link-counter" aria-live="polite">
+                    Menampilkan 5 link
+                </div>
+
+                <ul class="links-list" id="linksList">
+                    <li class="link-card-item" data-category="sosmed project">
+                        <a href="https://github.com/widiansakhara" target="_blank" rel="noopener noreferrer" class="link-card">
+                            <span class="link-icon" aria-hidden="true">🐙</span>
+                            <span class="link-text">GitHub</span>
+                        </a>
+                    </li>
+
+                    <li class="link-card-item" data-category="sosmed">
+                        <a href="https://instagram.com/widiannnnnn" target="_blank" rel="noopener noreferrer" class="link-card">
+                            <span class="link-icon" aria-hidden="true">📷</span>
+                            <span class="link-text">Instagram</span>
+                        </a>
+                    </li>
+
+                    <li class="link-card-item" data-category="sosmed">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="link-card">
+                            <span class="link-icon" aria-hidden="true">💼</span>
+                            <span class="link-text">LinkedIn</span>
+                        </a>
+                    </li>
+
+                    <li class="link-card-item" data-category="project">
+                        <a href="#portfolio" class="link-card">
+                            <span class="link-icon" aria-hidden="true">🎨</span>
+                            <span class="link-text">Portofolio</span>
+                        </a>
+                    </li>
+
+                    <li class="link-card-item" data-category="project">
+                        <a href="#resume" class="link-card">
+                            <span class="link-icon" aria-hidden="true">📇</span>
+                            <span class="link-text">Resume</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+    </main>
+
+    <div id="toastMsg" class="toast-msg" role="status" aria-live="polite"></div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Widian Sakhara Dwi Rahmawati</p>
     </footer>
-    <h1>Hello, Namaku Widian</h1>
-    <p>Ini halaman pertamaku di internet.</p>
-    <p>Ini adalah halaman HTML sederhana yang menampilkan pesan sambutan.</p>
+
+    <script src="script.js"></script>
 </body>
 </html>
