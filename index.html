@@ -1,25 +1,55 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Widian Sakhara - Link Profile</title>
-    <meta name="description" content="Profil link Widian Sakhara - Kumpulan media sosial, portofolio, dan resume.">
+    <title>WidianMart - Link Toko & UMKM Sembako Resmi</title>
+    <meta name="description"
+        content="Katalog resmi WidianMart - Solusi belanja sembako dan kebutuhan harian hemat, segar, dan siap antar kilat.">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div class="ambient-glow" aria-hidden="true"></div>
-    <div class="ambient-glow-2" aria-hidden="true"></div>
+    <!-- Ambient Mesh Gradients & Grid Pattern Background (Ultra Modern Vibe) -->
+    <div class="ambient-mesh-bg" aria-hidden="true">
+        <div class="mesh-orb orb-1"></div>
+        <div class="mesh-orb orb-2"></div>
+        <div class="mesh-orb orb-3"></div>
+        <div class="mesh-grid-pattern"></div>
+    </div>
 
+    <!-- Header Tools (Quick Order, Share, Theme Toggle) -->
     <header class="site-header">
+        <button id="quickOrderBtn" class="header-action-btn quick-order-nav-btn"
+            aria-label="Buka Kalkulator Pesan Kilat" title="Kalkulator Pesanan Sembako"
+            onclick="openModalById('orderModal'); return false;">
+            <span class="btn-icon">🛒</span>
+            <span class="btn-label-text">Pesan Kilat</span>
+        </button>
+
+        <button id="shareBtn" class="header-action-btn" aria-label="Bagikan Tautan Toko" title="Bagikan Halaman Ini">
+            <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                <polyline points="16 6 12 2 8 6"></polyline>
+                <line x1="12" y1="2" x2="12" y2="15"></line>
+            </svg>
+        </button>
+
         <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Beralih Tema" title="Beralih Tema">
             <span id="themeIcon">
-
-                <svg class="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="12" r="4"></circle>
                     <path d="M12 2v2"></path>
                     <path d="M12 20v2"></path>
@@ -34,98 +64,815 @@
         </button>
     </header>
 
+    <!-- Running Promo Ticker (Glassmorphism Marquee) -->
+    <aside class="promo-ticker" aria-label="Pengumuman Promo Toko">
+        <div class="ticker-content">
+            <span class="ticker-tag">🔥 PROMO SPESIAL HARI INI</span>
+            <span class="ticker-text">Diskon Sembako s/d 30% · Minyak 2L Rp 33.500 · Beras Premium 5kg Rp 68.000 ·
+                Gratis Ongkir Min. Belanja Rp 50.000 via WhatsApp! 🛵</span>
+        </div>
+    </aside>
+
+    <!-- Main Container Layout (Grid 2 Kolom) -->
     <main class="page-wrapper">
         <div class="card-container">
-            
-            <section class="profile-section" aria-label="Profil Pengguna">
-                <div class="avatar-wrapper" id="avatarWrapper">
-                    <div class="avatar-ring" aria-hidden="true"></div>
-                    <img id="avatarImg" src="avatar.jpg" onerror="this.onerror=null; this.src='avatar.png';" alt="Widian Sakhara" class="avatar-img" width="140" height="140">
-                    <input type="file" id="avatarFileInput" accept="image/*" style="display: none;" aria-label="Upload Foto Profil">
-                </div>
-                
-                <h1 class="profile-name">Widian Sakhara</h1>
-                <p class="profile-bio">Mahasiswa IT · Belajar web development</p>
 
-                <nav class="social-pills-row" aria-label="Tautan Media Sosial Singkat">
-                    <a href="https://github.com/widiansakhara" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="GitHub">
-                        <span aria-hidden="true">🐙</span>
-                    </a>
-                    <a href="https://instagram.com/widiannnnnn" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="Instagram">
-                        <span aria-hidden="true">📷</span>
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="LinkedIn">
-                        <span aria-hidden="true">💼</span>
-                    </a>
-                </nav>
+            <!-- Kolom Kiri: Profil Toko UMKM & Social Proof -->
+            <section class="profile-section" aria-label="Profil WidianMart">
+                <div class="profile-card-glass">
+                    <div class="avatar-wrapper" id="avatarWrapper">
+                        <div class="avatar-ring" aria-hidden="true"></div>
+                        <img id="avatarImg" src="logo.jpg?v=14" alt="Logo WidianMart" class="avatar-img" width="140"
+                            height="140">
+                        <input type="file" id="avatarFileInput" accept="image/*" style="display: none;"
+                            aria-label="Upload Logo Toko">
+                    </div>
+
+                    <div class="profile-title-row">
+                        <h1 class="profile-name">WidianMart</h1>
+                        <span class="verified-badge" title="UMKM Terverifikasi & Resmi"
+                            aria-label="Terverifikasi">✓</span>
+                    </div>
+
+                    <div class="store-category-pill">
+                        <span class="category-icon">🏪</span>
+                        <span>UMKM Sembako & Kebutuhan Harian</span>
+                    </div>
+
+                    <p class="profile-bio">Solusi Belanja Harian Hemat, Cepat & Terpercaya. Menyediakan sembako
+                        berkualitas, produk segar, camilan & pesan antar langsung ke rumah Anda.</p>
+
+                    <!-- Status Jam Buka Toko (Live Real-Time) -->
+                    <div class="store-status-pill" id="storeStatusPill">
+                        <span class="status-indicator-dot" id="statusDot"></span>
+                        <span id="storeStatusText" class="status-text">🟢 Buka Sekarang (06:00 - 22:00 WIB)</span>
+                    </div>
+
+                    <!-- Micro Social Proof Stats Row (Keren & Meningkatkan Kredibilitas) -->
+                    <div class="store-stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number">⭐ 4.9/5</span>
+                            <span class="stat-caption">Rating Pembeli</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">📦 1.800+</span>
+                            <span class="stat-caption">Pesanan Sukses</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">⚡ 30 Mnt</span>
+                            <span class="stat-caption">Pesan Antar</span>
+                        </div>
+                    </div>
+
+                    <!-- Kupon Diskon Interaktif (Fitur Nilai Plus) -->
+                    <div class="coupon-box" id="couponBox">
+                        <div class="coupon-decor">🏷️</div>
+                        <div class="coupon-info">
+                            <span class="coupon-tag">KUPON DISKON SPESIAL</span>
+                            <div class="coupon-code-row">
+                                <code class="coupon-code" id="couponCode">WIDIANHEMAT10K</code>
+                                <button type="button" class="copy-coupon-btn" id="copyCouponBtn"
+                                    title="Salin Kode Kupon">
+                                    <span class="copy-icon">📋</span> Salin
+                                </button>
+                            </div>
+                            <span class="coupon-desc">Potongan Rp 10.000 untuk order via WhatsApp</span>
+                        </div>
+                    </div>
+
+                    <!-- Keunggulan Layanan Toko (Trust Guarantee Badges) -->
+                    <div class="store-features-list">
+                        <div class="feature-item">
+                            <span class="feature-icon">🚚</span>
+                            <span>Gratis Ongkir Min. Belanja Rp 50.000</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🌾</span>
+                            <span>Jaminan Beras Pulen & Produk Berkualitas</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">💵</span>
+                            <span>Bisa Bayar di Tempat (COD) / Transfer QRIS</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimoni Pelanggan (Social Proof Menarik) -->
+                    <div class="customer-review-card">
+                        <div class="review-header">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                            <span class="verified-tag">Pelanggan Terverifikasi</span>
+                        </div>
+                        <p class="review-text">"Berasnya pulen, minyak goreng murah & pesan jam 9 jam 9.30 sudah sampai
+                            depan rumah!"</p>
+                        <span class="review-user">— Ibu Rina (Langganan WidianMart)</span>
+                    </div>
+
+                    <!-- Tombol Pintas Kontak & Sosmed -->
+                    <nav class="social-pills-row" aria-label="Tautan Singkat Toko">
+                        <a href="https://wa.me/6285643665422" target="_blank" rel="noopener noreferrer"
+                            class="social-circle-btn wa-btn" aria-label="WhatsApp Admin"
+                            title="WhatsApp Admin (Fast Response)">
+                            <span aria-hidden="true">💬</span>
+                        </a>
+                        <a href="https://www.instagram.com/widiannnnnn" target="_blank" rel="noopener noreferrer"
+                            class="social-circle-btn ig-btn" aria-label="Instagram Resmi" title="Instagram @widiannnnnn">
+                            <span aria-hidden="true">📷</span>
+                        </a>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Mushola+Al+Huda+Bogelan+Sukorejo+Mojotengah+Wonosobo" target="_blank" rel="noopener noreferrer"
+                            class="social-circle-btn maps-btn" aria-label="Titik Google Maps"
+                            title="Lokasi Toko: Bogelan RT 1 RW 3 (Dekat Mushola Al-Huda), Sukorejo, Mojotengah, Wonosobo">
+                            <span aria-hidden="true">📍</span>
+                        </a>
+                        <button type="button" id="openPpobModalPill"
+                            class="social-circle-btn ppob-btn" aria-label="Loket Tagihan PPOB"
+                            title="Buka Loket Pembayaran Tagihan PLN, Token & Pulsa"
+                            onclick="openModalById('ppobModal'); return false;">
+                            <span aria-hidden="true">⚡</span>
+                        </button>
+                    </nav>
+                </div>
             </section>
 
-            <section class="links-section" aria-label="Daftar Tautan">
-                <h2 class="section-label">LINK SAYA</h2>
+            <!-- Kolom Kanan: Katalog Link & Tambah Link -->
+            <section class="links-section" aria-label="Daftar Katalog dan Tautan Toko">
 
-                <div class="filter-tabs" role="tablist" aria-label="Filter Tautan">
+                <!-- Input Pencarian Cepat dengan Shortcut Hint -->
+                <div class="search-container">
+                    <span class="search-icon" aria-hidden="true">🔍</span>
+                    <input type="text" id="linkSearchInput" class="search-input"
+                        placeholder="Cari sembako, promo, paket, pulsa, atau CS..." aria-label="Cari link atau produk">
+                    <span class="search-hint-kbd" id="searchKbdHint">Cari Cepat</span>
+                    <button type="button" id="clearSearchBtn" class="clear-search-btn" aria-label="Hapus Pencarian"
+                        style="display: none;">✕</button>
+                </div>
+
+                <!-- Tab Filter Kategori dengan Counter Tiap Tab -->
+                <div class="filter-tabs" role="tablist" aria-label="Filter Kategori Toko">
                     <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">
-                        Semua
+                        <span>Semua</span>
+                        <span class="tab-badge" id="tabCountAll">8</span>
                     </button>
-                    <button class="filter-tab" data-filter="sosmed" role="tab" aria-selected="false">
-                        Sosmed
+                    <button class="filter-tab" data-filter="promo" role="tab" aria-selected="false">
+                        <span>Belanja & Promo</span>
+                        <span class="tab-badge" id="tabCountPromo">4</span>
                     </button>
-                    <button class="filter-tab" data-filter="project" role="tab" aria-selected="false">
-                        Project
+                    <button class="filter-tab" data-filter="marketplace" role="tab" aria-selected="false">
+                        <span>Paket & Mitra</span>
+                        <span class="tab-badge" id="tabCountMarketplace">3</span>
+                    </button>
+                    <button class="filter-tab" data-filter="layanan" role="tab" aria-selected="false">
+                        <span>Layanan & CS</span>
+                        <span class="tab-badge" id="tabCountLayanan">4</span>
                     </button>
                 </div>
 
+                <!-- Counter Link Dinamis -->
                 <div id="linkCounter" class="link-counter" aria-live="polite">
-                    Menampilkan 5 link
+                    Menampilkan 8 tautan & katalog pilihan
                 </div>
 
+                <!-- Banner Flash Sale Spesial (Visual Highlight Menarik) -->
+                <div class="flash-deal-banner" id="flashDealBanner">
+                    <div class="deal-badge-row">
+                        <span class="deal-badge-pulse">⚡ PROMO SPESIAL HARI INI</span>
+                        <span class="deal-timer" id="dealTimer">⏱️ Sisa 03:45:20</span>
+                    </div>
+                    <div class="deal-body">
+                        <div class="deal-info">
+                            <h3 class="deal-title">Paket Sembako Berkah Hemat</h3>
+                            <p class="deal-desc">Beras Ramos 5kg + Minyak 2L + Gula Pasir 1kg + Teh</p>
+                            <div class="deal-price-line">
+                                <span class="old-price">Rp 128.000</span>
+                                <span class="new-price">Rp 99.500</span>
+                                <span class="discount-pill">HEMAT 22%</span>
+                            </div>
+                        </div>
+                        <button type="button" class="deal-action-btn" id="claimDealBtn"
+                            onclick="openModalById('packageModal'); return false;">
+                            <span>Pesan Paket</span> ➔
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Daftar Tautan Utama Berkonsep Bento Card -->
                 <ul class="links-list" id="linksList">
-                    <li class="link-card-item" data-category="sosmed project">
-                        <a href="https://github.com/widiansakhara" target="_blank" rel="noopener noreferrer" class="link-card">
-                            <span class="link-icon" aria-hidden="true">🐙</span>
-                            <span class="link-text">GitHub</span>
+
+                    <!-- Link 1: WhatsApp Fast Order (Featured Neon Highlight) -->
+                    <li class="link-card-item" data-category="promo layanan">
+                        <a href="https://wa.me/6285643665422" target="_blank" rel="noopener noreferrer"
+                            class="link-card card-wa highlight-card">
+                            <div class="card-icon-box box-wa">
+                                <span class="link-icon" aria-hidden="true">⚡</span>
+                            </div>
+                            <div class="link-info">
+                                <div class="link-header-line">
+                                    <span class="link-text">Order Cepat via WhatsApp</span>
+                                    <span class="card-badge badge-green">Respon Cepat</span>
+                                </div>
+                                <span class="link-desc">Pesan sekarang, langsung kami siapkan & diantar kurir ke
+                                    rumah</span>
+                            </div>
+                            <span class="link-arrow" aria-hidden="true">➔</span>
                         </a>
                     </li>
 
-                    <li class="link-card-item" data-category="sosmed">
-                        <a href="https://instagram.com/widiannnnnn" target="_blank" rel="noopener noreferrer" class="link-card">
-                            <span class="link-icon" aria-hidden="true">📷</span>
-                            <span class="link-text">Instagram</span>
+                    <!-- Link 2: Katalog Promo Sembako (Interactive Calculator Modal) -->
+                    <li class="link-card-item" data-category="promo">
+                        <a href="#orderModal" id="openPromoCalculatorCard"
+                            class="link-card card-promo interactive-calc-card" role="button" aria-haspopup="dialog"
+                            aria-controls="orderModal" onclick="openModalById('orderModal'); return false;">
+                            <div class="card-icon-box box-amber">
+                                <span class="link-icon" aria-hidden="true">🏷️</span>
+                            </div>
+                            <div class="link-info">
+                                <div class="link-header-line">
+                                    <span class="link-text">Katalog Makanan, Sembako & Camilan</span>
+                                    <span class="card-badge badge-amber pulse-badge">✨ 22+ Pilihan Lengkap</span>
+                                </div>
+                                <span class="link-desc">Beras, Minyak, Mie, Roti, Camilan, Kopi & Bumbu Dapur (Hitung &
+                                    Order Langsung)</span>
+                            </div>
+                            <span class="link-arrow" aria-hidden="true">➔</span>
                         </a>
                     </li>
 
-                    <li class="link-card-item" data-category="sosmed">
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="link-card">
-                            <span class="link-icon" aria-hidden="true">💼</span>
-                            <span class="link-text">LinkedIn</span>
+                    <!-- Link 3: Paket Sembako Bulanan Keluarga (Interactive Modal Detail) -->
+                    <li class="link-card-item" data-category="marketplace promo">
+                        <a href="#packageModal" id="openPackageModalCard"
+                            class="link-card card-paket interactive-calc-card" role="button" aria-haspopup="dialog"
+                            aria-controls="packageModal" onclick="openModalById('packageModal'); return false;">
+                            <div class="card-icon-box box-paket">
+                                <span class="link-icon" aria-hidden="true">🧺</span>
+                            </div>
+                            <div class="link-info">
+                                <div class="link-header-line">
+                                    <span class="link-text">Paket Sembako Bulanan Keluarga</span>
+                                    <span class="card-badge badge-purple pulse-badge">✨ 3 Pilihan Hemat</span>
+                                </div>
+                                <span class="link-desc">Beras 10kg, Minyak 4L, Telur 2kg, Gula & Terigu (Lihat Rincian & Pesan)</span>
+                            </div>
+                            <span class="link-arrow" aria-hidden="true">➔</span>
                         </a>
                     </li>
 
-                    <li class="link-card-item" data-category="project">
-                        <a href="#portfolio" class="link-card">
-                            <span class="link-icon" aria-hidden="true">🎨</span>
-                            <span class="link-text">Portofolio</span>
+                    <!-- Link 4: Loket Bayar Tagihan, Token & Pulsa (Interactive Modal) -->
+                    <li class="link-card-item" data-category="marketplace layanan">
+                        <a href="#ppobModal" id="openPpobModalCard"
+                            class="link-card card-ppob interactive-calc-card" role="button" aria-haspopup="dialog"
+                            aria-controls="ppobModal" onclick="openModalById('ppobModal'); return false;">
+                            <div class="card-icon-box box-ppob">
+                                <span class="link-icon" aria-hidden="true">⚡</span>
+                            </div>
+                            <div class="link-info">
+                                <div class="link-header-line">
+                                    <span class="link-text">Loket Bayar Tagihan, Token & Pulsa</span>
+                                    <span class="card-badge badge-blue pulse-badge">Bebas Antre</span>
+                                </div>
+                                <span class="link-desc">Token PLN, PDAM, BPJS, paket kuota data & top-up saldo E-Wallet (Buka Loket)</span>
+                            </div>
+                            <span class="link-arrow" aria-hidden="true">➔</span>
                         </a>
                     </li>
 
-                    <li class="link-card-item" data-category="project">
-                        <a href="#resume" class="link-card">
-                            <span class="link-icon" aria-hidden="true">📇</span>
-                            <span class="link-text">Resume</span>
+                    <!-- Link 5: GrabMart / GoMart -->
+                    <li class="link-card-item" data-category="marketplace promo">
+                        <a href="https://grab.com" target="_blank" rel="noopener noreferrer"
+                            class="link-card card-grab">
+                            <div class="card-icon-box box-grab">
+                                <span class="link-icon" aria-hidden="true">🛵</span>
+                            </div>
+                            <div class="link-info">
+                                <div class="link-header-line">
+                                    <span class="link-text">Pesan di GrabMart & GoMart</span>
+                                    <span class="card-badge badge-blue">30 Menit Tiba</span>
+                                </div>
+                                <span class="link-desc">Solusi saat darurat kehabisan bumbu dapur atau sembako
+                                    harian</span>
+                            </div>
+                            <span class="link-arrow" aria-hidden="true">➔</span>
+                        </a>
+                    </li>
+
+                    <!-- Link 6: Lokasi Google Maps -->
+                    <li class="link-card-item" data-category="layanan">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Mushola+Al+Huda+Bogelan+Sukorejo+Mojotengah+Wonosobo" target="_blank" rel="noopener noreferrer"
+                            class="link-card card-maps">
+                            <div class="card-icon-box box-maps">
+                                <span class="link-icon" aria-hidden="true">📍</span>
+                            </div>
+                            <div class="link-info">
+                                <div class="link-header-line">
+                                    <span class="link-text">Lokasi Toko Fisik (Google Maps)</span>
+                                    <span class="card-badge badge-purple">Buka Tiap Hari</span>
+                                </div>
+                                <span class="link-desc">Bogelan RT 1 RW 3 (Dekat Mushola Al-Huda), Sukorejo, Mojotengah, Wonosobo</span>
+                            </div>
+                            <span class="link-arrow" aria-hidden="true">➔</span>
+                        </a>
+                    </li>
+
+                    <!-- Link 7: Program Kemitraan & Reseller (Interactive Modal) -->
+                    <li class="link-card-item" data-category="promo layanan">
+                        <a href="#mitraModal" id="openMitraModalCard"
+                            class="link-card card-reseller interactive-calc-card" role="button" aria-haspopup="dialog"
+                            aria-controls="mitraModal" onclick="openModalById('mitraModal'); return false;">
+                            <div class="card-icon-box box-grosir">
+                                <span class="link-icon" aria-hidden="true">🤝</span>
+                            </div>
+                            <div class="link-info">
+                                <div class="link-header-line">
+                                    <span class="link-text">Program Kemitraan & Reseller Warung</span>
+                                    <span class="card-badge badge-amber pulse-badge">Harga Agen</span>
+                                </div>
+                                <span class="link-desc">Peluang usaha sembako modal terjangkau & pasokan terjamin (Lihat Paket)</span>
+                            </div>
+                            <span class="link-arrow" aria-hidden="true">➔</span>
+                        </a>
+                    </li>
+
+                    <!-- Link 8: Instagram Official -->
+                    <li class="link-card-item" data-category="layanan">
+                        <a href="https://www.instagram.com/widiannnnnn" target="_blank" rel="noopener noreferrer"
+                            class="link-card card-ig">
+                            <div class="card-icon-box box-ig">
+                                <span class="link-icon" aria-hidden="true">📸</span>
+                            </div>
+                            <div class="link-info">
+                                <div class="link-header-line">
+                                    <span class="link-text">Instagram @widiannnnnn</span>
+                                    <span class="card-badge badge-pink">Follow Kami</span>
+                                </div>
+                                <span class="link-desc">Update stok harian, kuis berhadiah mingguan & tips belanja
+                                    hemat</span>
+                            </div>
+                            <span class="link-arrow" aria-hidden="true">➔</span>
                         </a>
                     </li>
                 </ul>
+
+                <!-- State Bila Pencarian Kosong -->
+                <div id="noResultsMsg" class="no-results-msg" style="display: none;">
+                    <span class="no-results-emoji">🔎</span>
+                    <p class="no-results-title">Produk atau layanan tidak ditemukan</p>
+                    <p class="no-results-sub">Coba kata kunci lain atau pilih tab kategori di atas</p>
+                </div>
+
+                <!-- Bagian Form Tambah Link / Promo Dinamis (Materi Pertemuan 4) -->
+                <div class="add-link-section">
+                    <div class="section-subtitle-row">
+                        <div>
+                            <h2 class="section-label">TAMBAH LINK / PROMO BARU</h2>
+                            <p class="section-sublabel">Input tautan baru ke katalog (Tersimpan di LocalStorage)</p>
+                        </div>
+                        <span class="helper-tag">Fitur Mandiri UMKM</span>
+                    </div>
+
+                    <form id="addLinkForm" class="add-link-card">
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="linkTitleInput" class="form-label">Nama Link / Promo <span
+                                        class="required-star">*</span></label>
+                                <input type="text" id="linkTitleInput" class="form-input"
+                                    placeholder="Cth: Promo Beras Wangi 5kg" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="linkCategorySelect" class="form-label">Kategori <span
+                                        class="required-star">*</span></label>
+                                <select id="linkCategorySelect" class="form-select">
+                                    <option value="promo">Belanja & Promo</option>
+                                    <option value="marketplace">Marketplace</option>
+                                    <option value="layanan">Layanan & CS</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="linkUrlInput" class="form-label">URL / Tautan Link <span
+                                        class="required-star">*</span></label>
+                                <input type="text" id="linkUrlInput" class="form-input"
+                                    placeholder="https://... atau wa.me/..." required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="linkBadgeInput" class="form-label">Label Badge (Opsional)</label>
+                                <input type="text" id="linkBadgeInput" class="form-input"
+                                    placeholder="Cth: Diskon 25%, Promo Baru, HOT">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="linkDescInput" class="form-label">Deskripsi Singkat (Opsional)</label>
+                            <input type="text" id="linkDescInput" class="form-input"
+                                placeholder="Keterangan singkat produk atau promo yang ditawarkan">
+                        </div>
+
+                        <button type="submit" id="addLinkBtn" class="form-submit-btn">
+                            <span class="btn-icon">➕</span>
+                            <span>Tambah ke Katalog Toko</span>
+                        </button>
+                    </form>
+                </div>
+
             </section>
 
         </div>
     </main>
 
+    <!-- Modal Kalkulator & Pesanan Kilat (Fitur WOW / Nilai Plus Kreativitas) -->
+    <div class="modal-overlay" id="orderModal" aria-hidden="true">
+        <div class="modal-card">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-header-icon">🛍️</span>
+                    <div>
+                        <h3 class="modal-title">Katalog Belanja Sembako & Makanan</h3>
+                        <p class="modal-subtitle">Pilih produk makanan & kebutuhan dapur, total dihitung otomatis!</p>
+                    </div>
+                </div>
+                <button type="button" class="modal-close-btn" id="closeModalBtn" aria-label="Tutup Jendela" onclick="closeAllModals(); return false;">✕</button>
+            </div>
+
+            <div class="modal-body">
+                <!-- Filter Kategori Cepat dalam Modal -->
+                <div class="modal-filter-pills" role="tablist" aria-label="Filter Produk Makanan">
+                    <button type="button" class="modal-pill active" data-mcat="all">Semua (22)</button>
+                    <button type="button" class="modal-pill" data-mcat="sembako">🌾 Sembako</button>
+                    <button type="button" class="modal-pill" data-mcat="mie">🍜 Mie & Kaleng</button>
+                    <button type="button" class="modal-pill" data-mcat="snack">🍪 Roti & Snack</button>
+                    <button type="button" class="modal-pill" data-mcat="bumbu">🫙 Bumbu & Minum</button>
+                </div>
+
+                <div class="quick-order-items" id="quickOrderItems">
+                    <!-- 22 Produk Makanan & Sembako di-render dinamis otomatis oleh script.js -->
+                </div>
+
+                <div class="order-summary-box">
+                    <div class="summary-line">
+                        <span>Total Belanja:</span>
+                        <strong class="total-amount" id="modalTotalAmount">Rp 0</strong>
+                    </div>
+                    <div class="free-shipping-bar" id="freeShippingNotice">
+                        <span>🛵 Belanja min. Rp 50.000 untuk Gratis Ongkir!</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn-cancel" id="cancelModalBtn" onclick="closeAllModals(); return false;">Tutup</button>
+                <button type="button" class="btn-send-wa" id="sendOrderWaBtn">
+                    <span class="wa-icon">💬</span> Kirim Pesanan via WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Detail Pilihan Paket Sembako Bulanan & Hemat -->
+    <div class="modal-overlay" id="packageModal" aria-hidden="true">
+        <div class="modal-card modal-card-package">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-header-icon">🧺</span>
+                    <div>
+                        <h3 class="modal-title">Pilihan Paket Sembako WidianMart</h3>
+                        <p class="modal-subtitle">Belanja paket lebih hemat, praktis & gratis ongkir sampai dapur!</p>
+                    </div>
+                </div>
+                <button type="button" class="modal-close-btn" id="closePackageModalBtn" aria-label="Tutup Jendela" onclick="closeAllModals(); return false;">✕</button>
+            </div>
+
+            <div class="modal-body package-modal-body">
+                <!-- Keuntungan Belanja Paket Banner -->
+                <div class="package-perks-bar">
+                    <div class="perk-pill"><span>🚚</span> Bebas Ongkir</div>
+                    <div class="perk-pill"><span>💵</span> Bisa COD / QRIS</div>
+                    <div class="perk-pill"><span>🌾</span> Jaminan Beras Pulen</div>
+                </div>
+
+                <!-- Paket 1: Paket Bulanan Keluarga Jumbo (Best Seller) -->
+                <div class="package-deal-card featured-deal">
+                    <div class="package-deal-header">
+                        <div>
+                            <span class="package-deal-tag">⭐ PILIHAN UTAMA KELUARGA</span>
+                            <h4 class="package-deal-title">Paket Sembako Bulanan Keluarga</h4>
+                            <p class="package-deal-sub">Cukup untuk kebutuhan 1 bulan penuh keluarga (3-5 orang)</p>
+                        </div>
+                    </div>
+                    <div class="package-items-box">
+                        <span class="package-items-heading">📋 Rincian Produk di Dalam Paket:</span>
+                        <ul class="package-items-checklist">
+                            <li><span>🌾</span> <strong>Beras Ramos Super 10 kg</strong> (2 karung @ 5kg)</li>
+                            <li><span>🌻</span> <strong>Minyak Goreng Refill 4 Liter</strong> (2 pouch @ 2L)</li>
+                            <li><span>🥚</span> <strong>Telur Ayam Negeri Segar 2 kg</strong></li>
+                            <li><span>🍬</span> <strong>Gula Pasir Gulaku Kristal 2 kg</strong></li>
+                            <li><span>🌾</span> <strong>Tepung Terigu Segitiga Biru 1 kg</strong></li>
+                            <li><span>🍜</span> <strong>10 Bungkus Mie Instan Indomie Goreng</strong></li>
+                            <li><span>🫙</span> <strong>Kecap Manis Bango 550 ml</strong></li>
+                            <li><span>☕</span> <strong>Kopi Kapal Api Mix 1 Renceng</strong> (10 sachet)</li>
+                            <li><span>🫖</span> <strong>Teh Celup Sariwangi 1 Kotak</strong> (25 kantong)</li>
+                        </ul>
+                    </div>
+                    <div class="package-pricing-action">
+                        <div class="package-price-wrap">
+                            <span class="package-old-price">Rp 285.000</span>
+                            <span class="package-main-price">Rp 242.000</span>
+                            <span class="package-save-badge">HEMAT RP 43.000 (15%)</span>
+                        </div>
+                        <a href="https://wa.me/6285643665422?text=Halo%20Admin%20WidianMart,%20saya%20mau%20pesan%20*Paket%20Sembako%20Bulanan%20Keluarga%20(Rp%20242.000)*.%0A%0A%F0%9F%93%8B%20Rincian:%0A-%20Beras%2010kg%20(2x5kg)%0A-%20Minyak%20Goreng%204L%0A-%20Telur%20Ayam%202kg%0A-%20Gula%20Pasir%202kg%0A-%20Tepung%20Terigu%201kg%0A-%20Indomie%20Goreng%2010%20bungkus%0A-%20Kecap%20Bango%20550ml%0A-%20Kopi%20Kapal%20Api%2010%20sachet%0A-%20Teh%20Sariwangi%2025%20kantong%0A%0AMohon%20info%20ketersediaan%20stok%20dan%20pengiriman%20ke%20alamat%20saya.%20Terima%20kasih!"
+                            target="_blank" rel="noopener noreferrer" class="btn-order-package btn-order-primary">
+                            <span>💬 Pesan Paket Bulanan</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Paket 2: Paket Berkah Hemat Mingguan -->
+                <div class="package-deal-card">
+                    <div class="package-deal-header">
+                        <div>
+                            <span class="package-deal-tag tag-amber">⚡ FLASH SALE MINGGUAN</span>
+                            <h4 class="package-deal-title">Paket Sembako Berkah Hemat</h4>
+                            <p class="package-deal-sub">Pilihan ekonomis mingguan untuk masak harian</p>
+                        </div>
+                    </div>
+                    <div class="package-items-box">
+                        <span class="package-items-heading">📋 Rincian Produk di Dalam Paket:</span>
+                        <ul class="package-items-checklist">
+                            <li><span>🌾</span> <strong>Beras Ramos Super 5 kg</strong></li>
+                            <li><span>🌻</span> <strong>Minyak Goreng Refill 2 Liter</strong></li>
+                            <li><span>🥚</span> <strong>Telur Ayam Negeri Segar 1 kg</strong></li>
+                            <li><span>🍬</span> <strong>Gula Pasir Gulaku Kristal 1 kg</strong></li>
+                            <li><span>🍜</span> <strong>5 Bungkus Mie Instan Indomie</strong></li>
+                            <li><span>🫖</span> <strong>Teh Celup Sariwangi 1 Kotak</strong> (25 kantong)</li>
+                        </ul>
+                    </div>
+                    <div class="package-pricing-action">
+                        <div class="package-price-wrap">
+                            <span class="package-old-price">Rp 128.000</span>
+                            <span class="package-main-price">Rp 99.500</span>
+                            <span class="package-save-badge">HEMAT 22%</span>
+                        </div>
+                        <a href="https://wa.me/6285643665422?text=Halo%20Admin%20WidianMart,%20saya%20mau%20pesan%20*Paket%20Sembako%20Berkah%20Hemat%20(Rp%2099.500)*.%0A%0A%F0%9F%93%8B%20Rincian:%0A-%20Beras%205kg%0A-%20Minyak%202L%0A-%20Telur%201kg%0A-%20Gula%201kg%0A-%20Indomie%205%20pcs%0A-%20Teh%20Sariwangi%2025s%0A%0AMohon%20info%20ketersediaan%20stok%20dan%20pengiriman%20ke%20alamat%20saya.%20Terima%20kasih!"
+                            target="_blank" rel="noopener noreferrer" class="btn-order-package btn-order-amber">
+                            <span>💬 Pesan Paket Berkah</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Paket 3: Paket Sembako Dapur & Bumbu Komplit -->
+                <div class="package-deal-card">
+                    <div class="package-deal-header">
+                        <div>
+                            <span class="package-deal-tag tag-blue">🍳 DAPUR KOMPLIT</span>
+                            <h4 class="package-deal-title">Paket Masak & Bumbu Dapur</h4>
+                            <p class="package-deal-sub">Kombinasi bahan pokok plus bumbu dapur sedap</p>
+                        </div>
+                    </div>
+                    <div class="package-items-box">
+                        <span class="package-items-heading">📋 Rincian Produk di Dalam Paket:</span>
+                        <ul class="package-items-checklist">
+                            <li><span>🌾</span> <strong>Beras Ramos Super 5 kg</strong></li>
+                            <li><span>🌻</span> <strong>Minyak Goreng Refill 2 Liter</strong></li>
+                            <li><span>🫙</span> <strong>Kecap Manis Bango 550 ml</strong></li>
+                            <li><span>🌶️</span> <strong>Saus Sambal Indofood Botol 275 ml</strong></li>
+                            <li><span>🍲</span> <strong>Kaldu Bubuk Royco Sapi 1 Renceng</strong></li>
+                            <li><span>🧅</span> <strong>Bawang Merah & Putih Segar (500 gr)</strong></li>
+                        </ul>
+                    </div>
+                    <div class="package-pricing-action">
+                        <div class="package-price-wrap">
+                            <span class="package-old-price">Rp 105.000</span>
+                            <span class="package-main-price">Rp 85.000</span>
+                            <span class="package-save-badge">HEMAT RP 20.000</span>
+                        </div>
+                        <a href="https://wa.me/6285643665422?text=Halo%20Admin%20WidianMart,%20saya%20mau%20pesan%20*Paket%20Masak%20%26%20Bumbu%20Dapur%20(Rp%2085.000)*.%0A%0A%F0%9F%93%8B%20Rincian:%0A-%20Beras%205kg%0A-%20Minyak%202L%0A-%20Kecap%20Bango%20550ml%0A-%20Saus%20Sambal%20Indofood%20275ml%0A-%20Royco%201%20renceng%0A-%20Bawang%20Merah%20%26%20Putih%20500gr%0A%0AMohon%20info%20ketersediaan%20stok%20dan%20pengiriman%20ke%20alamat%20saya.%20Terima%20kasih!"
+                            target="_blank" rel="noopener noreferrer" class="btn-order-package btn-order-blue">
+                            <span>💬 Pesan Paket Masak</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn-cancel" id="cancelPackageModalBtn" onclick="closeAllModals(); return false;">Tutup</button>
+                <a href="https://wa.me/6285643665422?text=Halo%20Admin%20WidianMart,%20saya%20mau%20tanya%20custom%20Paket%20Sembako%20sesuai%20kebutuhan%20keluarga%20saya"
+                    target="_blank" rel="noopener noreferrer" class="btn-send-wa">
+                    <span class="wa-icon">💬</span> Tanya Custom Paket ke Admin
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Loket Pembayaran Tagihan & PPOB -->
+    <div class="modal-overlay" id="ppobModal" aria-hidden="true">
+        <div class="modal-card modal-card-ppob">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-header-icon">⚡</span>
+                    <div>
+                        <h3 class="modal-title">Loket Tagihan & PPOB WidianMart</h3>
+                        <p class="modal-subtitle">Beli token listrik, bayar tagihan air, BPJS & pulsa tanpa antre!</p>
+                    </div>
+                </div>
+                <button type="button" class="modal-close-btn" id="closePpobModalBtn" aria-label="Tutup Jendela" onclick="closeAllModals(); return false;">✕</button>
+            </div>
+
+            <div class="modal-body ppob-modal-body">
+                <div class="ppob-info-banner">
+                    <span>⚡ Transaksi diproses kasir WidianMart · Cepat, Aman & Struk Digital Resmi</span>
+                </div>
+
+                <!-- Pilihan Jenis Layanan -->
+                <div class="ppob-services-grid" id="ppobServicesGrid">
+                    <div class="ppob-service-item active" data-service="Token Listrik PLN" data-label="Nomor Meter / ID Pelanggan PLN">
+                        <span class="ppob-service-icon">⚡</span>
+                        <span class="ppob-service-name">Token PLN</span>
+                    </div>
+                    <div class="ppob-service-item" data-service="Tagihan Listrik Pascabayar" data-label="ID Pelanggan Listrik Pascabayar">
+                        <span class="ppob-service-icon">💡</span>
+                        <span class="ppob-service-name">Listrik Pasca</span>
+                    </div>
+                    <div class="ppob-service-item" data-service="Tagihan Air PDAM Wonosobo" data-label="Nomor Sambungan / ID Pelanggan PDAM">
+                        <span class="ppob-service-icon">💧</span>
+                        <span class="ppob-service-name">PDAM Air</span>
+                    </div>
+                    <div class="ppob-service-item" data-service="Pulsa & Paket Data" data-label="Nomor Handphone (Telkomsel/Indosat/XL/dll)">
+                        <span class="ppob-service-icon">📱</span>
+                        <span class="ppob-service-name">Pulsa & Data</span>
+                    </div>
+                    <div class="ppob-service-item" data-service="Top Up E-Wallet" data-label="Nomor HP Akun DANA/OVO/GoPay/ShopeePay">
+                        <span class="ppob-service-icon">👛</span>
+                        <span class="ppob-service-name">E-Wallet</span>
+                    </div>
+                    <div class="ppob-service-item" data-service="Iuran BPJS Kesehatan" data-label="Nomor Kartu BPJS / Virtual Account">
+                        <span class="ppob-service-icon">🏥</span>
+                        <span class="ppob-service-name">BPJS</span>
+                    </div>
+                </div>
+
+                <!-- Form Isian Transaksi PPOB -->
+                <div class="ppob-form-box">
+                    <div class="form-group">
+                        <label for="ppobNomorInput" class="form-label" id="ppobInputLabel">Nomor Meter / ID Pelanggan PLN <span class="required-star">*</span></label>
+                        <input type="text" id="ppobNomorInput" class="form-input" placeholder="Masukkan nomor meter / ID pelanggan / HP" required>
+                    </div>
+
+                    <div class="form-group" id="ppobNominalGroup">
+                        <label for="ppobNominalSelect" class="form-label">Pilihan Nominal / Transaksi</label>
+                        <select id="ppobNominalSelect" class="form-select">
+                            <option value="Token 20.000 (Bayar Rp 22.500)">Token Rp 20.000 (Bayar Rp 22.500)</option>
+                            <option value="Token 50.000 (Bayar Rp 52.500)" selected>Token Rp 50.000 (Bayar Rp 52.500)</option>
+                            <option value="Token 100.000 (Bayar Rp 102.500)">Token Rp 100.000 (Bayar Rp 102.500)</option>
+                            <option value="Token 200.000 (Bayar Rp 202.500)">Token Rp 200.000 (Bayar Rp 202.500)</option>
+                            <option value="Cek Tagihan Sesuai Pemakaian">Cek Tagihan Sesuai Pemakaian</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="ppob-advantages">
+                    <div class="adv-item"><span>✓</span> Bebas Antre</div>
+                    <div class="adv-item"><span>✓</span> Bayar COD / QRIS</div>
+                    <div class="adv-item"><span>✓</span> Struk via WhatsApp</div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn-cancel" id="cancelPpobModalBtn" onclick="closeAllModals(); return false;">Tutup</button>
+                <button type="button" class="btn-send-wa" id="sendPpobWaBtn">
+                    <span class="wa-icon">💬</span> Kirim Transaksi ke Kasir
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Program Kemitraan & Reseller Warung -->
+    <div class="modal-overlay" id="mitraModal" aria-hidden="true">
+        <div class="modal-card modal-card-mitra">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <span class="modal-header-icon">🤝</span>
+                    <div>
+                        <h3 class="modal-title">Program Kemitraan & Reseller Warung</h3>
+                        <p class="modal-subtitle">Mulai usaha warung sembako sendiri di rumah dengan pasokan resmi WidianMart!</p>
+                    </div>
+                </div>
+                <button type="button" class="modal-close-btn" id="closeMitraModalBtn" aria-label="Tutup Jendela" onclick="closeAllModals(); return false;">✕</button>
+            </div>
+
+            <div class="modal-body mitra-modal-body">
+                <div class="package-perks-bar">
+                    <div class="perk-pill"><span>📦</span> Harga Agen Tangan Ke-1</div>
+                    <div class="perk-pill"><span>🚚</span> Pasokan Diantar Gratis</div>
+                    <div class="perk-pill"><span>🔄</span> Garansi Retur Rusak</div>
+                    <div class="perk-pill"><span>📈</span> Bimbingan Usaha</div>
+                </div>
+
+                <!-- Paket Mitra 1 -->
+                <div class="package-deal-card">
+                    <div class="package-deal-header">
+                        <div>
+                            <span class="package-deal-tag tag-amber">MODAL HEMAT</span>
+                            <h4 class="package-deal-title">Paket Mitra Warung Teras / Pemula</h4>
+                            <p class="package-deal-sub">Modal: <strong>Rp 1.500.000</strong> · Cocok untuk mulai jualan sembako di teras rumah</p>
+                        </div>
+                    </div>
+                    <div class="package-items-box">
+                        <span class="package-items-heading">📋 Fasilitas & Pasokan Awal:</span>
+                        <ul class="package-items-checklist">
+                            <li><span>🌾</span> Beras Ramos Premium 50 kg (10 karung @ 5kg)</li>
+                            <li><span>🌻</span> Minyak Goreng 24 Liter (1 Dus kemasan 2L)</li>
+                            <li><span>🥚</span> Telur Ayam Negeri Segar 10 kg</li>
+                            <li><span>🍬</span> Gula Pasir Kristal Murni 10 kg</li>
+                            <li><span>🏷️</span> Spanduk Resmi Kemitraan Toko & Brosur Harga Modal</li>
+                        </ul>
+                    </div>
+                    <div class="package-pricing-action">
+                        <div class="package-price-wrap">
+                            <span class="package-main-price">Rp 1.500.000</span>
+                            <span class="package-save-badge">POTENSI LABA 15-20%</span>
+                        </div>
+                        <a href="https://wa.me/6285643665422?text=Halo%20Admin%20WidianMart,%20saya%20tertarik%20bergabung%20*Paket%20Mitra%20Warung%20Teras%20(Rp%201.500.000)*.%20Mohon%20info%20prosedur%20dan%20pendaftarannya.%20Terima%20kasih!"
+                            target="_blank" rel="noopener noreferrer" class="btn-order-package btn-order-amber">
+                            <span>💬 Daftar Paket Pemula</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Paket Mitra 2 -->
+                <div class="package-deal-card featured-deal">
+                    <div class="package-deal-header">
+                        <div>
+                            <span class="package-deal-tag">⭐ PALING BANYAK DIPILIH</span>
+                            <h4 class="package-deal-title">Paket Reseller Warung Sembako Komplit</h4>
+                            <p class="package-deal-sub">Modal: <strong>Rp 3.500.000</strong> · Stok lengkap sembako, aneka mie, bumbu & rak display</p>
+                        </div>
+                    </div>
+                    <div class="package-items-box">
+                        <span class="package-items-heading">📋 Fasilitas & Pasokan Awal:</span>
+                        <ul class="package-items-checklist">
+                            <li><span>🌾</span> Beras Premium 100 kg + Minyak Goreng 48 Liter</li>
+                            <li><span>🥚</span> Telur 20 kg + Gula Pasir 20 kg + Terigu 15 kg</li>
+                            <li><span>🍜</span> Aneka Mie Instan (3 Dus Goreng & Kuah)</li>
+                            <li><span>🫙</span> Bumbu Dapur Komplit, Kopi & Teh</li>
+                            <li><span>🗄️</span> 1 Unit Rak Susun Display Toko + Spanduk Banner Ukuran 2x1 Meter</li>
+                        </ul>
+                    </div>
+                    <div class="package-pricing-action">
+                        <div class="package-price-wrap">
+                            <span class="package-main-price">Rp 3.500.000</span>
+                            <span class="package-save-badge">SIAP BUKA HARI INI</span>
+                        </div>
+                        <a href="https://wa.me/6285643665422?text=Halo%20Admin%20WidianMart,%20saya%20tertarik%20bergabung%20*Paket%20Reseller%20Komplit%20(Rp%203.500.000)*.%20Mohon%20info%20jadwal%20pengiriman%20rak%20dan%20stok%20ke%20warung%20saya.%20Terima%20kasih!"
+                            target="_blank" rel="noopener noreferrer" class="btn-order-package btn-order-primary">
+                            <span>💬 Daftar Paket Komplit</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Paket Mitra 3: Grosir Rutin -->
+                <div class="package-deal-card">
+                    <div class="package-deal-header">
+                        <div>
+                            <span class="package-deal-tag tag-blue">📦 KULAKAN RUTIN</span>
+                            <h4 class="package-deal-title">Pasokan Grosir Warung Berjalan</h4>
+                            <p class="package-deal-sub">Khusus warung yang sudah berjalan dan butuh pasokan rutin mingguan murah</p>
+                        </div>
+                    </div>
+                    <div class="package-pricing-action">
+                        <div class="package-price-wrap">
+                            <span class="package-main-price">Harga Grosir Agen</span>
+                            <span class="package-save-badge">BEBAS ONGKIR SE-KOTA</span>
+                        </div>
+                        <a href="https://wa.me/6285643665422?text=Halo%20Admin%20WidianMart,%20saya%20sudah%20punya%20warung%20dan%20mau%20kulakan%20grosir%20rutin.%20Boleh%20minta%20daftar%20harga%20agen%20terbarunya?%20Terima%20kasih!"
+                            target="_blank" rel="noopener noreferrer" class="btn-order-package btn-order-blue">
+                            <span>💬 Minta Daftar Harga Grosir</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn-cancel" id="cancelMitraModalBtn" onclick="closeAllModals(); return false;">Tutup</button>
+                <a href="https://wa.me/6285643665422?text=Halo%20Admin%20WidianMart,%20saya%20mau%20konsultasi%20tanya-tanya%20seputar%20Program%20Kemitraan%20Warung"
+                    target="_blank" rel="noopener noreferrer" class="btn-send-wa">
+                    <span class="wa-icon">💬</span> Konsultasi Kemitraan via WA
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Floating Alert -->
     <div id="toastMsg" class="toast-msg" role="status" aria-live="polite"></div>
 
+    <!-- Site Footer -->
     <footer class="site-footer">
-        <p>&copy; 2026 Widian Sakhara Dwi Rahmawati</p>
+        <p>&copy; 2026 <strong>WidianMart</strong> · UMKM Sahabat Belanja Keluarga Indonesia</p>
+        <p class="footer-sub">Final Project Add Class (P1 - P4) · Dibuat oleh Widian Sakhara</p>
     </footer>
 
+    <!-- JavaScript Script -->
     <script src="script.js"></script>
 </body>
+
 </html>
